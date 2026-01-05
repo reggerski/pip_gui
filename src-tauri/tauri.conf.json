@@ -1,0 +1,52 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
+  },
+  "package": {
+    "productName": "PyPM",
+    "version": "1.0.0",
+    "identifier": "com.pypm.app"
+  },
+  "tauri": {
+    "windows": [
+      {
+        "title": "PyPM - Python Package Manager",
+        "width": 1400,
+        "height": 900,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": ["msi", "nsis"],
+      "nsis": {
+        "installerIcon": null,
+        "uninstallerIcon": null,
+        "headerIcon": null,
+        "certificateThumbprint": null,
+        "signingIdentity": null
+      },
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "11",
+        "useBootstrapper": true,
+        "signingIdentity": null,
+        "entitlements": null
+      },
+      "linux": {
+        "deb": {},
+        "rpm": {}
+      }
+    }
+  }
+}
