@@ -4,7 +4,9 @@ A modern, production-grade desktop application for managing Python packages acro
 
 ## ⚠️ NOTICE
 
-This project is still under **development**. It will **NOT WORK** now and will **give compilation errors**. As a humble request to anyone who sees this, **please fork this repo and help me in dev by creating PRs**. I really value your help and appreciate it.
+**[🟡 UPDATE]**: The app builds **without any compilation errors** and runs as well, but the **layout is not propely organised** and the **core backend logic is not being called** due to some reason. I am trying to fix this and would *like collaboration*, if possible.
+
+This project is still under **development**. Though the project is being worked on throughly, **ERRORS MIGHT COME**. As a *humble* request to anyone who sees this, **please fork this repo and help me in dev by creating *PRs***. I really value your help and appreciate it.
 
 ## Why pip_gui?
 
@@ -140,12 +142,13 @@ pip_gui/
 │   │   ├── commands/            # Tauri commands
 │   │   └── utils/               # Helpers
 │   ├── Cargo.toml
+│   ├── tailwind.config.js        # Styling
 │   └── tauri.conf.json
 │
 ├── vite.config.js               # Frontend build
-├── tailwind.config.js           # Styling
 ├── package.json                 # Node dependencies
-└── README.md                    # This file
+├── SETUP.md                     # This file
+└── README.md                    # README
 ```
 
 ## Development
@@ -159,14 +162,18 @@ pip_gui/
 ### Setup
 
 ```bash
+cargo install tauri-cli --version "^2.0.0" --locked
+```
+
+```bash
 npm install
-npm run tauri-dev
+cargo tauri dev
 ```
 
 ### Build
 
 ```bash
-npm run tauri-build
+cargo tauri build
 ```
 
 See [SETUP.md](./SETUP.md) for detailed instructions.

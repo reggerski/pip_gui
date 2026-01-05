@@ -1,5 +1,5 @@
 {
-  "name": "pypm",
+  "name": "pip_gui",
   "version": "1.0.0",
   "description": "Production-grade Python package manager GUI",
   "main": "src/index.html",

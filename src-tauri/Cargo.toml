@@ -8,9 +8,7 @@ name = "pip_gui"
 path = "src/main.rs"
 
 [dependencies]
-tauri = "2.0"
-tauri-build = "2.0"
-
+tauri = { version = "2.0", features = [] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 tokio = { version = "1.36", features = ["full"] }
@@ -23,6 +21,9 @@ directories = "5.0"
 anyhow = "1.0"
 tracing = "0.1"
 tracing-subscriber = "0.3"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
 
 [profile.release]
 panic = "abort"

@@ -18,9 +18,9 @@ pub struct AppState {
 
 impl AppState {
     pub fn new() -> Self {
-        let config_dir = ProjectDirs::from("com", "pypm", "pypm")
+        let config_dir = ProjectDirs::from("com", "pip_gui", "pip_gui")
             .map(|dirs| dirs.config_dir().to_path_buf())
-            .unwrap_or_else(|| PathBuf::from(".pypm"));
+            .unwrap_or_else(|| PathBuf::from(".pip_gui"));
 
         let mut app_state = AppState {
             selected_python: None,
@@ -42,11 +42,11 @@ impl AppState {
         Ok(selection)
     }
 
-    pub fn save_python_selection(&self, selection: &PythonSelection) -> Result<(), Box<dyn std::error::Error>> {
-        fs::create_dir_all(&self.config_dir)?;
-        let config_file = self.config_dir.join("python_selection.json");
-        let json = serde_json::to_string_pretty(selection)?;
-        fs::write(config_file, json)?;
-        Ok(())
-    }
+    //pub fn save_python_selection(&self, selection: &PythonSelection) -> Result<(), Box<dyn std::error::Error>> {
+    //   fs::create_dir_all(&self.config_dir)?;
+    //    let config_file = self.config_dir.join("python_selection.json");
+    //    let json = serde_json::to_string_pretty(selection)?;
+    //    fs::write(config_file, json)?;
+    //    Ok(())
+    //}
 }

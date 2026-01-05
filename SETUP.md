@@ -28,35 +28,50 @@ Ensure all files are in place:
 ```bash
 pip_gui/
 ├── src/                          # Frontend
-│   ├── index.html
-│   ├── css/input.css
-│   └── js/main.js
-├── src-tauri/                    # Backend
+│   ├── index.html               # Main HTML
+│   ├── css/input.css            # Tailwind input
+│   └── js/main.js               # App logic
+│
+├── src-tauri/                    # Tauri/Rust backend
 │   ├── src/
-│   │   ├── main.rs
-│   │   ├── state.rs
-│   │   ├── models/
-│   │   ├── commands/
-│   │   └── utils/
+│   │   ├── main.rs              # App entry
+│   │   ├── state.rs             # App state
+│   │   ├── models/              # Data structures
+│   │   ├── commands/            # Tauri commands
+│   │   └── utils/               # Helpers
 │   ├── Cargo.toml
+│   ├── tailwind.config.js        # Styling
 │   └── tauri.conf.json
-├── vite.config.js
-├── tailwind.config.js
-├── package.json
-└── README.md
-└── SETUP.md
+│
+├── vite.config.js               # Frontend build
+├── package.json                 # Node dependencies
+├── SETUP.md                     # This file
+└── README.md                    # README
 ```
 
 ### 3. Build Tailwind CSS
 
 ```bash
-npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css
+npx tailwindcss -i ./src-tauri/src/utils/css/input.css -o ./src-tauri/src/utils/css/output.css
 ```
 
 ### 4. Development Mode
 
+### Setup
+
 ```bash
-npm run tauri-dev
+cargo install tauri-cli --version "^2.0.0" --locked
+```
+
+```bash
+npm install
+cargo tauri dev
+```
+
+### Build
+
+```bash
+cargo tauri build
 ```
 
 This starts:
@@ -64,12 +79,6 @@ This starts:
 - Vite dev server (frontend hot reload)
 - Tauri app with HMR
 - Rust backend compiler
-
-### 5. Production Build
-
-```bash
-npm run tauri-build
-```
 
 Generates installers for:
 
